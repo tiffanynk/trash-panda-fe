@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './styles/App.scss';
+import Map from './components/Map';
+import MapSearch from './components/MapSearch';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // const mapRef = useRef(null)
+    const [location, setLocation] = useState({});
+
+    return (
+        <div className="App">
+            <header>
+                <h1>TRASH PANDA</h1>
+            </header>
+            <MapSearch setLocation={setLocation} />
+            <Map location={location} />
+        </div>
+    );
 }
 
 export default App;
