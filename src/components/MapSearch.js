@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import env from 'react-dotenv';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 export default function MapSearch({ setLocation }) {
     const [searchTerm, setSearchTerm] = useState('');
@@ -14,13 +16,16 @@ export default function MapSearch({ setLocation }) {
     };
 
     return (
-        <form className="map-search" onSubmit={handleSubmit}>
-            <input
+        <Form className="map-search" onSubmit={handleSubmit}>
+            <Form.Control
+                type="text"
                 placeholder="Input location"
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
             />
-            <input type="submit" />
-        </form>
+            <Button variant="primary" type="submit">
+                Search
+            </Button>
+        </Form>
     );
 }

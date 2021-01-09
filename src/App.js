@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+import './styles/App.scss';
 import Map from './components/Map';
 import MapSearch from './components/MapSearch';
 

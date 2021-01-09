@@ -1,3 +1,5 @@
+@import 'custom';
+
 .App {
     height: 100vh;
     width: 100vw;
@@ -7,5 +9,10 @@
 
 .map-search {
     margin: 10px;
-    align-self: center;
+    display: flex;
+    max-width: 500px;
+}
+
+input {
+    margin-right: 10px;
 }
