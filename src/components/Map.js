@@ -6,6 +6,10 @@ export function MapContainer(props) {
     const [selectedPlace, setSelectedPlace] = useState({});
     const [activeMarker, setActiveMarker] = useState({});
     const [showingInfoWindow, setShowingInfoWindow] = useState(false);
+    const [markers, setMarkers] = useState([
+        { id: 1, name: 'Point1', position: { lat: 37.762391, lng: -122.439192 } },
+        { id: 2, name: 'Point2', position: { lat: 37.759703, lng: -122.428093 } },
+    ]);
 
     const onMarkerClick = (props, marker, event) => {
         setSelectedPlace(props);
@@ -14,12 +18,23 @@ export function MapContainer(props) {
     };
 
     const onInfoWindowClose = () => {
-        console.log('close');
+        setShowingInfoWindow(false);
+    };
+
+    const renderMarkers = () => {
+        return markers.map((marker) => (
+            <Marker
+                key={marker.id}
+                onClick={onMarkerClick}
+                name={marker.name}
+                position={marker.position}
+            />
+        ));
     };
 
     return (
         <Map google={props.google} zoom={14}>
-            <Marker onClick={onMarkerClick} name={'Current location'} />
+            {renderMarkers()}
             <InfoWindow
                 marker={activeMarker}
                 visible={showingInfoWindow}
