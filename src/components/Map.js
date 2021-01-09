@@ -33,7 +33,7 @@ export function MapContainer(props) {
     };
 
     return (
-        <Map google={props.google} zoom={14}>
+        <Map google={props.google} containerStyle={containerStyle} zoom={14}>
             {renderMarkers()}
             <InfoWindow
                 marker={activeMarker}
@@ -47,6 +47,12 @@ export function MapContainer(props) {
         </Map>
     );
 }
+
+const containerStyle = {
+    position: 'absolute',
+    width: '100%',
+    height: '75%',
+};
 
 export default GoogleApiWrapper({
     apiKey: env.GOOGLE_API_KEY,
