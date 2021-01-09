@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import env from 'react-dotenv';
+import trashPandaIcon from '../assets/trash-panda-icon.svg';
 
 export function MapContainer(props) {
     const [selectedPlace, setSelectedPlace] = useState({});
@@ -28,6 +29,11 @@ export function MapContainer(props) {
                 onClick={onMarkerClick}
                 name={marker.name}
                 position={marker.position}
+                icon={{
+                    url: trashPandaIcon,
+                    anchor: new props.google.maps.Point(16, 16),
+                    scaledSize: new props.google.maps.Size(32, 32),
+                }}
             />
         ));
     };
