@@ -22,7 +22,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://trash-panda-shehacks.web.app/">
     <img src="https://i.ibb.co/XYVmqmV/TRASH-PANDA-LOGO.jpg" alt="Trash Panda Logo" width="200" height="200">
   </a>
 
@@ -32,7 +32,9 @@
     No one likes a litterer! Trash Panda helps users find the nearest recycling and trash bin locations. Take it one step further and earn points for every time you recycle or add a new location to the map.
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://trash-panda-shehacks.web.app/">View Website</a>
+    ·
+    <a href="https://www.youtube.com/watch?v=-CKjlRJCqoM&feature=youtu.be">View Demo Video</a>
     ·
     <a href="https://github.com/tiffanynk/trash-panda-fe/issues">Report Bug</a>
     ·
@@ -53,7 +55,7 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#inspiration">Inspiration</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
       </ul>
@@ -87,25 +89,13 @@ Trash Panda is a Progressive Web App that aims to make it easier for people to r
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Inspiration
 
-To run on your local machine, follow these simple steps.
+Our team was inspired by our own beautiful, green-friendly city Denver, CO. With sustainability in mind, we wanted to add a gamification strategy to simple tasks like recycling and reducing litter. It’d be wonderful if corporations and local businesses were to help incentivize users' actions!
 
-### Installation
+### Challenges
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/tiffanynk/trash-panda-fe.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+Timing! We had so many great ideas we wanted to implement. We would have liked to fully incorporate a point system for user actions. Our biggest challenge was learning how to use Google/Firebase Firestore, Authentication and Functions and connect it with our Node.js backend in such a short amount of time.
 
 <!-- CONTRIBUTING -->
 ## Contributing
