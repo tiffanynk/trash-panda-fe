@@ -23,6 +23,37 @@ input {
     margin-right: 10px;
 }
 
+#signin-form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    text-align: center;
+    margin: 20px;
+    input {
+        width: 250px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 6px;
+    }
+    button {
+        width: 250px;
+        border-radius: 6px;
+        margin-top: 5px;
+    }
+    p {
+        margin-top: 10px;
+    }
+}
+
+#form-container {
+    border-radius: 8px;
+    align-self: center;
+    box-shadow: 1px 1px 2px 2px;
+    padding: 10px;
+    margin-top: 200px;
+  
 .bottom-nav-bar {
     position: absolute;
     bottom: 0;
