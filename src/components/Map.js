@@ -22,21 +22,23 @@ export function MapContainer(props) {
     };
 
     const renderMarkers = () => {
-        return locations.map((location) => (
-            <Marker
-                key={location.locationId}
-                onClick={(props, marker, event) =>
-                    onMarkerClick(props, marker, event, location)
-                }
-                name={location.name}
-                position={{ lat: location.lat, lng: location.lng }}
-                icon={{
-                    url: trashPandaIcon,
-                    anchor: new google.maps.Point(24, 24),
-                    scaledSize: new google.maps.Size(48, 48),
-                }}
-            />
-        ));
+        if (locations) {
+            return locations.map((location) => (
+                <Marker
+                    key={location.locationId}
+                    onClick={(props, marker, event) =>
+                        onMarkerClick(props, marker, event, location)
+                    }
+                    name={location.name}
+                    position={{ lat: location.lat, lng: location.lng }}
+                    icon={{
+                        url: trashPandaIcon,
+                        anchor: new google.maps.Point(24, 24),
+                        scaledSize: new google.maps.Size(48, 48),
+                    }}
+                />
+            ));
+        }
     };
 
     return (
