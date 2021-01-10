@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import env from 'react-dotenv';
 
-export default function SignIn({ signUp, logIn }) {
+export default function SignIn({ signUp, login }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
@@ -13,7 +13,7 @@ export default function SignIn({ signUp, logIn }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        loginScreen ? logIn({ email, password }) : signUp(username, email, password);
+        loginScreen ? login(email, password) : signUp(username, email, password);
     };
 
     const handleLogin = (event) => {
@@ -36,11 +36,11 @@ export default function SignIn({ signUp, logIn }) {
                     </>
                 ) : null}
                 <label>Email: </label>
-                <input name="Email" value={email} onChange={handleEmail}></input>
+                <input name="email" value={email} onChange={handleEmail}></input>
                 <label>Password: </label>
                 <input
                     type="password"
-                    name="Password"
+                    name="password"
                     value={password}
                     onChange={handlePassword}
                 ></input>
