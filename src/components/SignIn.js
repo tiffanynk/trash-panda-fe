@@ -45,7 +45,7 @@ export default function SignIn({ signUp, logIn }) {
                     onChange={handlePassword}
                 ></input>
                 <button onClick={(event) => handleSubmit(event)}>Submit</button>
-                {loginScreen ? (
+                {!loginScreen ? (
                     <>
                         <p>Already registered?</p>
                         <button onClick={handleLogin}>Log In</button>

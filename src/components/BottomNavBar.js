@@ -7,8 +7,33 @@ import MdContact from 'react-ionicons/lib/MdContact';
 import IosAdd from 'react-ionicons/lib/IosAdd';
 import trashPandaIcon from '../assets/trash-panda-icon.svg';
 
-export default function BottomNavBar() {
+export default function BottomNavBar({
+    setLocationSelect,
+    setHomeSelect,
+    setProfileSelect,
+}) {
     const [showModal, setShowModal] = useState(false);
+
+    const handleRaccoonClick = () => {
+        console.log('click');
+        setLocationSelect(true);
+        setHomeSelect(false);
+        setProfileSelect(false);
+    };
+
+    const handleHomeClick = () => {
+        console.log('home');
+        setHomeSelect(true);
+        setProfileSelect(false);
+        setLocationSelect(false);
+    };
+
+    const handleProfileClick = () => {
+        console.log('profile');
+        setProfileSelect(true);
+        setLocationSelect(false);
+        setHomeSelect(false);
+    };
 
     const renderRaccoonForm = () => {
         if (showModal === true) {
@@ -27,7 +52,7 @@ export default function BottomNavBar() {
                         </p>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick={() => setShowModal(false)}>Close</Button>
+                        <Button onClick={setShowModal(false)}>Close</Button>
                     </Modal.Footer>
                 </Modal>
             );
@@ -38,7 +63,11 @@ export default function BottomNavBar() {
         <>
             {renderRaccoonForm()}
             <ButtonGroup aria-label="Basic example" className="bottom-nav-bar">
-                <Button className="nav-button" variant="secondary">
+                <Button
+                    onClick={handleHomeClick}
+                    className="nav-button"
+                    variant="secondary"
+                >
                     <MdHome className="nav-icon" fontSize="32px" />
                 </Button>
                 <Button
@@ -50,7 +79,11 @@ export default function BottomNavBar() {
                     <img src={trashPandaIcon} className="nav-icon"></img>
                     {/* <MdTrash className="nav-icon" fontSize='32px' /> */}
                 </Button>
-                <Button className="nav-button" variant="secondary">
+                <Button
+                    onClick={handleProfileClick}
+                    className="nav-button"
+                    variant="secondary"
+                >
                     <MdContact className="nav-icon" fontSize="32px" />
                 </Button>
             </ButtonGroup>
