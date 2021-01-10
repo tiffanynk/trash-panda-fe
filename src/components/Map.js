@@ -1,28 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import env from 'react-dotenv';
 import trashPandaIcon from '../assets/trash-panda-icon.svg';
 import IosCheckmarkCircle from 'react-ionicons/lib/IosCheckmarkCircle';
 import IosCloseCircle from 'react-ionicons/lib/IosCloseCircle';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-
-const BACKEND_URL = 'https://us-central1-trash-panda-shehacks.cloudfunctions.net/api';
 
 export function MapContainer(props) {
-    const { google, location } = props;
+    const { google, location, locations } = props;
     const [activeMarker, setActiveMarker] = useState({});
     const [locationInfo, setLocationInfo] = useState({});
     const [showingInfoWindow, setShowingInfoWindow] = useState(false);
-    const [locations, setLocations] = useState([]);
-    // const [currentLocation, setCurrentLocation] = useState({
-    //     lat: 37.774929,
-    //     lng: -122.419416
-    // });
-    // const [show, setShow] = useState(false);
-
-    // const handleClose = () => setShow(false);
-    // const handleShow = (event) => console.log('click');
 
     const onMarkerClick = (props, marker, event, location) => {
         setActiveMarker(marker);
@@ -51,52 +38,6 @@ export function MapContainer(props) {
             />
         ));
     };
-
-    useEffect(() => {
-        fetch(`${BACKEND_URL}/locations/`)
-            .then((response) => response.json())
-            .then(setLocations);
-    }, []);
-
-    // const loadMap = () => {
-    //     const { lat, lng } = currentLocation
-    //     const center = new props.google.maps.LatLng(lat, lng);
-    //     const mapConfig = Object.assign({}, {
-    //         center: center,
-    //         zoom: 14
-    //     })
-
-    //     if (props && props.google) {
-    //         const map = new props.google.maps.Map(props.mapRef, mapConfig);
-
-    //         map.addListener('dragend', (evt) => {
-    //             props.onMove(map);
-    //         })
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     console.log(navigator.geolocation)
-    //     if (props.centerAroundCurrentLocation) {
-    //         if (navigator && navigator.geolocation) {
-    //             navigator.geolocation.getCurrentPosition((pos) => {
-    //                 const coords = pos.coords;
-    //                 setCurrentLocation({
-    //                     lat: coords.latitude,
-    //                     lng: coords.longitude
-    //                 })
-    //             })
-    //         }
-    //     }
-    //     loadMap();
-    // }, [])
-
-    // useEffect(() => {
-    //     if (logButton.current) {
-    //         console.log(logButton)
-    //         // logButton.addEventListener('click', () => console.log('click'))
-    //     }
-    // },[])
 
     return (
         <Map
