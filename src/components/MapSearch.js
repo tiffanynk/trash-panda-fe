@@ -10,21 +10,23 @@ export default function MapSearch({ setLocation }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch(GEOCODE_URL)
-            .then((response) => response.json())
-            .then((response) => setLocation(response.results[0].geometry.location));
+        if (searchTerm) {
+            fetch(GEOCODE_URL)
+                .then((response) => response.json())
+                .then((response) => setLocation(response.results[0].geometry.location));
+        }
     };
 
     return (
         <Form className="map-search" onSubmit={handleSubmit}>
             <Form.Control
                 type="text"
-                placeholder="Input location"
+                placeholder="What's your location?"
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
             />
             <Button variant="primary" type="submit">
-                Search
+                Enter
             </Button>
         </Form>
     );
