@@ -10,26 +10,31 @@ function App() {
     const [user, setUser] = useState({});
     const [showHome, isShowingHome] = useState(true);
 
-    const signUp = (user) => {
-        fetch(baseURL + 'users', {
+    const signup = (username, email, password) => {
+        console.log('email', email);
+        fetch(baseURL + 'signup', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                email: user.email,
-                username: user.username,
-                password: user.password,
+                username,
+                email,
+                password,
             }),
         })
-            .then((response) => response.json())
-            .then((user) => setUser(user));
+            .then((response) => {
+                console.log(response);
+                return response.json();
+            })
+            .then((result) => {
+                setUser(result.user);
+                isShowingHome(true);
+            });
     };
 
     const login = (email, password) => {
-        console.log('email', email);
-        console.log('password', password);
         fetch(baseURL + 'login', {
             method: 'POST',
             headers: {
@@ -58,7 +63,7 @@ function App() {
             {showHome ? (
                 <Home user={user} setUser={setUser} isShowingHome={isShowingHome} />
             ) : (
-                <SignIn login={login} signUp={signUp} />
+                <SignIn login={login} signup={signup} />
             )}
         </div>
     );

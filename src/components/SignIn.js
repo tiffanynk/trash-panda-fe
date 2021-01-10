@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function SignIn({ signUp, login }) {
+export default function SignIn({ signup, login }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
@@ -12,7 +12,7 @@ export default function SignIn({ signUp, login }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        loginScreen ? login(email, password) : signUp(username, email, password);
+        loginScreen ? login(email, password) : signup(username, email, password);
     };
 
     const handleLogin = (event) => {
@@ -28,7 +28,7 @@ export default function SignIn({ signUp, login }) {
                     <>
                         <label>Username: </label>
                         <input
-                            name="Username"
+                            name="username"
                             value={username}
                             onChange={handleUsername}
                         ></input>
