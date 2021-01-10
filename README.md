@@ -15,11 +15,11 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 
+<img src="https://img.shields.io/github/contributors/tiffanynk/trash-panda-fe?style=for-the-badge" alt="contributors badge"/>
+<img src="https://img.shields.io/github/forks/tiffanynk/trash-panda-fe?label=forks&style=for-the-badge" alt="forks badge"/>
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/tiffanynk/trash-panda-fe?label=fork&style=for-the-badge">
+<img alt="Bitbucket open issues" src="https://img.shields.io/bitbucket/issues-raw/tiffanynk/trash-panda-fe?style=for-the-badge">
 
 
 <!-- PROJECT LOGO -->
@@ -124,7 +124,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- FUTURE PLANS -->
 ## Future Plans
 
-The next feature planned for this app is to add full functionality for users to earn points for every recorded recycle action, and also earn points for each recycling location they add to the map for uthers to utilize. A leaderboard for the top point-earners will be visible on the app to help incentivize users. 
+The next feature planned for this app is to add full functionality for users to earn points for every recorded recycle action, and also earn points for each recycling location they add to the map for others to utilize. A leaderboard for the top point-earners will be visible on the app to help incentivize users. 
 
 <!-- CONTACT -->
 ## Contact
