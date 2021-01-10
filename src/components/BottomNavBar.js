@@ -2,6 +2,10 @@ import { useState } from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import MdHome from 'react-ionicons/lib/MdHome';
+import MdContact from 'react-ionicons/lib/MdContact';
+import IosAdd from 'react-ionicons/lib/IosAdd';
+import trashPandaIcon from '../assets/trash-panda-icon.svg';
 
 export default function BottomNavBar() {
     const [showModal, setShowModal] = useState(false);
@@ -35,17 +39,19 @@ export default function BottomNavBar() {
             {renderRaccoonForm()}
             <ButtonGroup aria-label="Basic example" className="bottom-nav-bar">
                 <Button className="nav-button" variant="secondary">
-                    ⌂
+                    <MdHome className="nav-icon" fontSize="32px" />
                 </Button>
                 <Button
                     className="nav-button"
                     variant="secondary"
                     onClick={() => setShowModal(!showModal)}
                 >
-                    +
+                    <IosAdd className="nav-icon" fontSize="40px" />
+                    <img src={trashPandaIcon} className="nav-icon"></img>
+                    {/* <MdTrash className="nav-icon" fontSize='32px' /> */}
                 </Button>
                 <Button className="nav-button" variant="secondary">
-                    ⚇
+                    <MdContact className="nav-icon" fontSize="32px" />
                 </Button>
             </ButtonGroup>
         </>

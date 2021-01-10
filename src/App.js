@@ -1,15 +1,12 @@
 import { useState } from 'react';
 import './styles/App.scss';
-import Map from './components/Map';
-import MapSearch from './components/MapSearch';
 import SignIn from './components/SignIn';
-import BottomNavBar from './components/BottomNavBar';
+import Header from './components/Header';
+import Home from './components/Home';
 
 const baseURL = 'https://us-central1-trash-panda-shehacks.cloudfunctions.net/api/';
 
 function App() {
-    // const mapRef = useRef(null)
-    const [location, setLocation] = useState({});
     const [user, setUser] = useState({});
 
     const signUp = (user) => {
@@ -58,13 +55,9 @@ function App() {
 
     return (
         <div className="App">
-            <header className="header">
-                <h1>TRASH PANDA</h1>
-            </header>
-            {/* <SignIn logIn={logIn} signUp={signUp}/> */}
-            <MapSearch setLocation={setLocation} />
-            <Map location={location} />
-            <BottomNavBar />
+            <Header />
+            <Home user={user} />
+          {/* <SignIn logIn={logIn} signUp={signUp}/> */}
         </div>
     );
 }
