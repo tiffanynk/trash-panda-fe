@@ -2,24 +2,31 @@ import { useState, useEffect } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import env from 'react-dotenv';
 import trashPandaIcon from '../assets/trash-panda-icon.svg';
+import IosCheckmarkCircle from 'react-ionicons/lib/IosCheckmarkCircle';
+import IosCloseCircle from 'react-ionicons/lib/IosCloseCircle';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
+const BACKEND_URL = 'https://us-central1-trash-panda-shehacks.cloudfunctions.net/api';
 
 export function MapContainer(props) {
     const { google, location } = props;
-    const [selectedPlace, setSelectedPlace] = useState({});
     const [activeMarker, setActiveMarker] = useState({});
+    const [locationInfo, setLocationInfo] = useState({});
     const [showingInfoWindow, setShowingInfoWindow] = useState(false);
+    const [locations, setLocations] = useState([]);
     // const [currentLocation, setCurrentLocation] = useState({
     //     lat: 37.774929,
     //     lng: -122.419416
     // });
-    const [markers, setMarkers] = useState([
-        { id: 1, name: 'Point1', position: { lat: 37.762391, lng: -122.439192 } },
-        { id: 2, name: 'Point2', position: { lat: 37.759703, lng: -122.428093 } },
-    ]);
+    // const [show, setShow] = useState(false);
 
-    const onMarkerClick = (props, marker, event) => {
-        setSelectedPlace(props);
+    // const handleClose = () => setShow(false);
+    // const handleShow = (event) => console.log('click');
+
+    const onMarkerClick = (props, marker, event, location) => {
         setActiveMarker(marker);
+        setLocationInfo(location);
         setShowingInfoWindow(true);
     };
 
@@ -28,12 +35,14 @@ export function MapContainer(props) {
     };
 
     const renderMarkers = () => {
-        return markers.map((marker) => (
+        return locations.map((location) => (
             <Marker
-                key={marker.id}
-                onClick={onMarkerClick}
-                name={marker.name}
-                position={marker.position}
+                key={location.locationId}
+                onClick={(props, marker, event) =>
+                    onMarkerClick(props, marker, event, location)
+                }
+                name={location.name}
+                position={{ lat: location.lat, lng: location.lng }}
                 icon={{
                     url: trashPandaIcon,
                     anchor: new google.maps.Point(24, 24),
@@ -42,6 +51,12 @@ export function MapContainer(props) {
             />
         ));
     };
+
+    useEffect(() => {
+        fetch(`${BACKEND_URL}/locations/`)
+            .then((response) => response.json())
+            .then(setLocations);
+    }, []);
 
     // const loadMap = () => {
     //     const { lat, lng } = currentLocation
@@ -76,16 +91,46 @@ export function MapContainer(props) {
     //     loadMap();
     // }, [])
 
+    // useEffect(() => {
+    //     if (logButton.current) {
+    //         console.log(logButton)
+    //         // logButton.addEventListener('click', () => console.log('click'))
+    //     }
+    // },[])
+
     return (
-        <Map google={google} center={location} containerStyle={containerStyle} zoom={16}>
+        <Map
+            google={google}
+            center={location}
+            containerStyle={containerStyle}
+            zoom={16}
+            initialCenter={{ lat: 39.7623533, lng: -104.9809164 }}
+        >
             {renderMarkers()}
             <InfoWindow
                 marker={activeMarker}
                 visible={showingInfoWindow}
                 onClose={onInfoWindowClose}
             >
-                <div>
-                    <h1>{selectedPlace.name}</h1>
+                <div className="location-details">
+                    <h2>{locationInfo.name}</h2>
+                    <p>
+                        Trash{' '}
+                        {locationInfo.trash ? (
+                            <IosCheckmarkCircle className="check-icon" />
+                        ) : (
+                            <IosCloseCircle className="x-icon" />
+                        )}
+                    </p>
+                    <p>
+                        Recycling{' '}
+                        {locationInfo.recycling ? (
+                            <IosCheckmarkCircle className="check-icon" />
+                        ) : (
+                            <IosCloseCircle className="x-icon" />
+                        )}
+                    </p>
+                    {/* <a href='http://trash-panda.tech'><Button id='log-button' onClick={handleShow}>+ Log Trash/Recyling</Button></a> */}
                 </div>
             </InfoWindow>
         </Map>
