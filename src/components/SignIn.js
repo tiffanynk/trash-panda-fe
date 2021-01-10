@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import env from 'react-dotenv';
+import { useState } from 'react';
 
 export default function SignIn({ signUp, login }) {
     const [username, setUsername] = useState('');

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 import MdHome from 'react-ionicons/lib/MdHome';
@@ -13,14 +12,12 @@ export default function BottomNavBar({
     handleShow,
 }) {
     const handleHomeClick = () => {
-        console.log('home');
         setHomeSelect(true);
         setProfileSelect(false);
         setLocationSelect(false);
     };
 
     const handleProfileClick = () => {
-        console.log('profile');
         setProfileSelect(true);
         setLocationSelect(false);
         setHomeSelect(false);

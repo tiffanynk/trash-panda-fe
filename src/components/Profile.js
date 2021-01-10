@@ -2,20 +2,22 @@ import { useState, useEffect } from 'react';
 import env from 'react-dotenv';
 import Button from 'react-bootstrap/Button';
 
-export default function Profile({ logOut, user }) {
-    const handleLogout = (user) => {
-        logOut(user);
+export default function Profile({ user, setUser, setHomeSelect, setProfileSelect }) {
+    const handleLogout = () => {
+        setUser({});
+        localStorage.removeItem('token');
+        setHomeSelect(true);
+        setProfileSelect(false);
     };
 
     return (
         <div id="profile-container">
             <h1>Profile</h1>
-            {user ? (
+            {user.email ? (
                 <>
                     <h2 id="info">User Information</h2>
-                    <h3>Username: {user.username}</h3>
                     <h3>Email: {user.email}</h3>
-                    <h3>Total Points: {user.points}</h3>
+                    <h3>Total Points: 500</h3>
                     <Button variant="primary" type="submit" onClick={handleLogout}>
                         Logout
                     </Button>

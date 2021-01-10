@@ -8,6 +8,7 @@ const baseURL = 'https://us-central1-trash-panda-shehacks.cloudfunctions.net/api
 
 function App() {
     const [user, setUser] = useState({});
+    const [showHome, isShowingHome] = useState(true);
 
     const signUp = (user) => {
         fetch(baseURL + 'users', {
@@ -43,7 +44,8 @@ function App() {
             .then((result) => {
                 if (result.token) {
                     localStorage.setItem('token', result.token);
-                    setUser(user);
+                    setUser(result.user);
+                    isShowingHome(true);
                 } else {
                     console.log('nope no login for you');
                 }
@@ -53,8 +55,11 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <Home user={user} />
-            {/* <SignIn login={login} signUp={signUp}/> */}
+            {showHome ? (
+                <Home user={user} setUser={setUser} isShowingHome={isShowingHome} />
+            ) : (
+                <SignIn login={login} signUp={signUp} />
+            )}
         </div>
     );
 }

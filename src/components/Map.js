@@ -73,7 +73,6 @@ export function MapContainer(props) {
                             <IosCloseCircle className="x-icon" />
                         )}
                     </p>
-                    {/* <a href='http://trash-panda.tech'><Button id='log-button' onClick={handleShow}>+ Log Trash/Recyling</Button></a> */}
                 </div>
             </InfoWindow>
         </Map>

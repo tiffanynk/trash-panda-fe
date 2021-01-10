@@ -9,7 +9,7 @@ import env from 'react-dotenv';
 
 const BACKEND_URL = 'https://us-central1-trash-panda-shehacks.cloudfunctions.net/api';
 
-export default function Home({ user }) {
+export default function Home({ user, isShowingHome, setUser }) {
     const [locations, setLocations] = useState([]);
     const [location, setLocation] = useState({});
     const [homeSelect, setHomeSelect] = useState(true);
@@ -46,9 +46,20 @@ export default function Home({ user }) {
         }
     };
 
+    const handleClick = () => {
+        isShowingHome(false);
+    };
+
     const navRendering = () => {
         if (profileSelect === true) {
-            return <Profile />;
+            return (
+                <Profile
+                    user={user}
+                    setUser={setUser}
+                    setHomeSelect={setHomeSelect}
+                    setProfileSelect={setProfileSelect}
+                />
+            );
         } else if (locationSelect === true) {
             return <p>location!</p>;
         } else {
@@ -171,7 +182,9 @@ export default function Home({ user }) {
                     setProfileSelect={setProfileSelect}
                 />
             ) : (
-                <Button className="login-button">LOGIN/SIGNUP FOR POINTS!</Button>
+                <Button className="login-button" onClick={handleClick}>
+                    LOGIN/SIGNUP FOR POINTS!
+                </Button>
             )}
         </>
     );
