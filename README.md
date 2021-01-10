@@ -62,7 +62,7 @@
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
-        <li><a href="#futureplans">Future Plans</a></li>
+        <li><a href="#future-plans">Future Plans</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -128,14 +128,13 @@ The next feature planned for this app is to add full functionality for users to 
 
 <!-- CONTACT -->
 ## Contact
+Kelsey Creehan <a href="https://www.linkedin.com/in/kelsey-creehan/"><img align="left" alt="Kelsey's LinkedIn" width="21px" src="https://user-images.githubusercontent.com/68958970/94946276-dc7b8a00-04a9-11eb-9431-366689b9fa06.png" /></a> - kelseycreehan@gmail.com
 
-Kristine Du - [Linkedin](https://www.linkedin.com/in/kristine-du/) - kristine.a.du@gmail.com
+Kristine Du <a href="https://www.linkedin.com/in/kristine-du/"><img align="left" alt="Kristine's LinkedIn" width="21px" src="https://user-images.githubusercontent.com/68958970/94946276-dc7b8a00-04a9-11eb-9431-366689b9fa06.png" /></a> - kristine.a.du@gmail.com
 
-Tiffany Kanjanabout - [Linkedin](https://www.linkedin.com/in/tiffany-kanjanabout/) - tiffanynitk@gmail.com
+Sydney Goldberg <a href="https://www.linkedin.com/in/sydney-goldberg-32b9751b0/"><img align="left" alt="Kristine's LinkedIn" width="21px" src="https://user-images.githubusercontent.com/68958970/94946276-dc7b8a00-04a9-11eb-9431-366689b9fa06.png" /></a> - sydney.goldberg@outlook.com
 
-Kelsey Creehan - [Linkedin](https://twitter.com/your_username) - kelseycreehan@gmail.com
-
-Sydney Goldberg - [Linkedin](https://www.linkedin.com/in/sydney-goldberg-32b9751b0/) - sydney.goldberg@outlook.com
+Tiffany Kanjanabout <a href="https://www.linkedin.com/in/tiffany-kanjanabout/"><img align="left" alt="Tiffany's LinkedIn" width="21px" src="https://user-images.githubusercontent.com/68958970/94946276-dc7b8a00-04a9-11eb-9431-366689b9fa06.png" /></a> - tiffanynitk@gmail.com
 
 [Project Frontend Link](https://github.com/tiffanynk/trash-panda-fe)<br/><br/>
 [Project Backend Link](https://github.com/tiffanynk/trash-panda-be)
