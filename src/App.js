@@ -4,6 +4,7 @@ import Map from './components/Map';
 import MapSearch from './components/MapSearch';
 import SignIn from './components/SignIn';
 import BottomNavBar from './components/BottomNavBar';
+import Profile from './components/Profile';
 
 function App() {
     // const mapRef = useRef(null)
@@ -14,9 +15,10 @@ function App() {
             <header className="header">
                 <h1>TRASH PANDA</h1>
             </header>
-            <MapSearch setLocation={setLocation} />
+            {/* <MapSearch setLocation={setLocation} />
             <Map location={location} />
-            <BottomNavBar />
+            <BottomNavBar /> */}
+            <Profile />
         </div>
     );
 }
