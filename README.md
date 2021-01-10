@@ -28,7 +28,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://i.ibb.co/XYVmqmV/TRASH-PANDA-LOGO.jpg" alt="Trash Panda Logo" width="200" height="200">
   </a>
 
   <h3 align="center">Trash Panda</h3>
@@ -134,7 +134,8 @@ Kelsey Creehan - [Linkedin](https://twitter.com/your_username) - kelseycreehan@g
 
 Sydney Goldberg - [Linkedin](https://www.linkedin.com/in/sydney-goldberg-32b9751b0/) - sydney.goldberg@outlook.com
 
-Project Link: [https://github.com/tiffanynk/trash-panda-fe](https://github.com/tiffanynk/trash-panda-fe)
+[Project Frontend Link](https://github.com/tiffanynk/trash-panda-fe)<br/><br/>
+[Project Backend Link](https://github.com/tiffanynk/trash-panda-be)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->

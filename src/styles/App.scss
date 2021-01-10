@@ -128,3 +128,27 @@ input {
         width: 40px;
     }
 }
+
+#profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+
+    h1,
+    #thanks {
+        align-self: center;
+        margin: 20px;
+    }
+
+    button {
+        align-self: center;
+        margin: 20px;
+    }
+    #info {
+        font-weight: bold;
+    }
+}
