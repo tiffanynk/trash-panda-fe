@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import env from 'react-dotenv';
 
-export default function SignIn() {
+export default function SignIn({ signUp, logIn }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
@@ -11,7 +11,10 @@ export default function SignIn() {
     const handlePassword = () => setPassword(target.value);
     const handleEmail = () => setEmail(target.value);
 
-    const handleSubmit = () => {};
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        loginScreen ? logIn(email, password) : signUp(username, email, password);
+    };
 
     return (
         <div id="form-container">
@@ -31,7 +34,7 @@ export default function SignIn() {
                 <input name="Email" value={email} onChange={handleEmail}></input>
                 <label>Password</label>
                 <input name="Password" value={password} onChange={handlePassword}></input>
-                <button onClick={handleSubmit}>Submit</button>
+                <button onClick={(event) => handleSubmit(event)}>Submit</button>
                 {loginScreen ? (
                     <>
                         <p>Already registered?</p>
