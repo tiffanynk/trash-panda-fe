@@ -2,13 +2,7 @@ import { useState, useEffect } from 'react';
 import env from 'react-dotenv';
 import Button from 'react-bootstrap/Button';
 
-export default function Profile({ logOut }) {
-    let user = {
-        username: 'kelsey',
-        email: 'kelsey@kelsey.com',
-        points: 10,
-    };
-
+export default function Profile({ logOut, user }) {
     const handleLogout = (user) => {
         logOut(user);
     };

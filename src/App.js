@@ -15,10 +15,9 @@ function App() {
             <header className="header">
                 <h1>TRASH PANDA</h1>
             </header>
-            {/* <MapSearch setLocation={setLocation} />
+            <MapSearch setLocation={setLocation} />
             <Map location={location} />
-            <BottomNavBar /> */}
-            <Profile />
+            <BottomNavBar />
         </div>
     );
 }
