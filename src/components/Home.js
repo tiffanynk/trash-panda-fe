@@ -15,22 +15,6 @@ export default function Home({ user }) {
     const [homeSelect, setHomeSelect] = useState(true);
     const [locationSelect, setLocationSelect] = useState(false);
     const [profileSelect, setProfileSelect] = useState(false);
-
-    const navRendering = () => {
-        if (profileSelect === true) {
-            return <Profile />;
-        } else if (locationSelect === true) {
-            return <p>location!</p>;
-        } else {
-            return (
-                <>
-                    <MapSearch setLocation={setLocation} />
-                    <Map location={location} />
-                </>
-            );
-        }
-    };
-
     const [showModal, setShowModal] = useState(false);
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
@@ -59,6 +43,21 @@ export default function Home({ user }) {
                     setLat(response.results[0].geometry.location.lat);
                     setLng(response.results[0].geometry.location.lng);
                 });
+        }
+    };
+
+    const navRendering = () => {
+        if (profileSelect === true) {
+            return <Profile />;
+        } else if (locationSelect === true) {
+            return <p>location!</p>;
+        } else {
+            return (
+                <>
+                    <MapSearch setLocation={setLocation} />
+                    <Map location={location} locations={locations} />
+                </>
+            );
         }
     };
 
