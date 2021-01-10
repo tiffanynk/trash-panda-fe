@@ -9,28 +9,12 @@ import env from 'react-dotenv';
 
 const BACKEND_URL = 'https://us-central1-trash-panda-shehacks.cloudfunctions.net/api';
 
-export default function Home({ user }) {
+export default function Home({ user, isShowingHome, setUser }) {
     const [locations, setLocations] = useState([]);
     const [location, setLocation] = useState({});
     const [homeSelect, setHomeSelect] = useState(true);
     const [locationSelect, setLocationSelect] = useState(false);
     const [profileSelect, setProfileSelect] = useState(false);
-
-    const navRendering = () => {
-        if (profileSelect === true) {
-            return <Profile />;
-        } else if (locationSelect === true) {
-            return <p>location!</p>;
-        } else {
-            return (
-                <>
-                    <MapSearch setLocation={setLocation} />
-                    <Map location={location} />
-                </>
-            );
-        }
-    };
-
     const [showModal, setShowModal] = useState(false);
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
@@ -59,6 +43,32 @@ export default function Home({ user }) {
                     setLat(response.results[0].geometry.location.lat);
                     setLng(response.results[0].geometry.location.lng);
                 });
+        }
+    };
+
+    const handleClick = () => {
+        isShowingHome(false);
+    };
+
+    const navRendering = () => {
+        if (profileSelect === true) {
+            return (
+                <Profile
+                    user={user}
+                    setUser={setUser}
+                    setHomeSelect={setHomeSelect}
+                    setProfileSelect={setProfileSelect}
+                />
+            );
+        } else if (locationSelect === true) {
+            return <p>location!</p>;
+        } else {
+            return (
+                <>
+                    <MapSearch setLocation={setLocation} />
+                    <Map location={location} locations={locations} />
+                </>
+            );
         }
     };
 
@@ -172,7 +182,9 @@ export default function Home({ user }) {
                     setProfileSelect={setProfileSelect}
                 />
             ) : (
-                <Button className="login-button">LOGIN/SIGNUP FOR POINTS!</Button>
+                <Button className="login-button" onClick={handleClick}>
+                    LOGIN/SIGNUP FOR POINTS!
+                </Button>
             )}
         </>
     );
