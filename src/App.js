@@ -4,6 +4,7 @@ import Map from './components/Map';
 import MapSearch from './components/MapSearch';
 import SignIn from './components/SignIn';
 import BottomNavBar from './components/BottomNavBar';
+import Profile from './components/Profile';
 
 function App() {
     // const mapRef = useRef(null)
