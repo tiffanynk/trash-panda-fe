@@ -19,8 +19,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -64,6 +62,7 @@
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
+        <li><a href="#futureplans">Future Plans</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -76,7 +75,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Trash Panda is a Progressive Web App that aims to make it easier for people to recycle and throw away trash rather than literring. The app displays an interactive map where the users can view all of the closest recycling bins and trash locations convenient to them. The locations are represented by our extremely cute mascot, the Trash Panda himself. The recycling/trash locations are crowd-sourced, so a user can also add a new trash/recycling location for others to utilize. A user also has the ability to earn points (along with good karma) each time they log recycling activity. Competitive recyclers can vie for a position on the points leaderboard, which displays the top participants.
+Trash Panda is a Progressive Web App that aims to make it easier for people to recycle and throw away trash rather than literring. The app displays an interactive map where the users can view all of the closest recycling bins and trash locations convenient to them. The locations are represented by our extremely cute mascot, the Trash Panda himself. The recycling/trash locations are crowd-sourced, so a user can also add a new trash/recycling location for others to utilize.
 
 ### Built With
 
@@ -100,7 +99,7 @@ To run on your local machine, follow these simple steps.
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/tiffanynk/trash-panda-fe.git
    ```
 3. Install NPM packages
    ```sh
@@ -122,6 +121,10 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+<!-- FUTURE PLANS -->
+## Future Plans
+
+The next feature planned for this app is to add full functionality for users to earn points for every recorded recycle action, and also earn points for each recycling location they add to the map for uthers to utilize. A leaderboard for the top point-earners will be visible on the app to help incentivize users. 
 
 <!-- CONTACT -->
 ## Contact
@@ -141,15 +144,13 @@ Sydney Goldberg - [Linkedin](https://www.linkedin.com/in/sydney-goldberg-32b9751
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-url]: https://github.com/tiffanynk/trash-panda-fe/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[forks-url]: https://github.com/tiffanynk/trash-panda-fe/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[stars-url]: https://github.com/tiffanynk/trash-panda-fe/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-url]: https://github.com/tiffanynk/trash-panda-fe/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
