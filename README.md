@@ -16,10 +16,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-<img src="https://img.shields.io/github/contributors/tiffanynk/trash-panda-fe?style=for-the-badge" alt="contributors badge"/>
-<img src="https://img.shields.io/github/forks/tiffanynk/trash-panda-fe?label=forks&style=for-the-badge" alt="forks badge"/>
-<img alt="GitHub forks" src="https://img.shields.io/github/forks/tiffanynk/trash-panda-fe?label=fork&style=for-the-badge">
-<img alt="Bitbucket open issues" src="https://img.shields.io/bitbucket/issues-raw/tiffanynk/trash-panda-fe?style=for-the-badge">
+<img src="https://img.shields.io/github/contributors/tiffanynk/trash-panda-fe?style=for-the-badge" alt="contributors badge"/><img src="https://img.shields.io/github/forks/tiffanynk/trash-panda-fe?label=forks&style=for-the-badge" alt="forks badge"/><img alt="GitHub forks" src="https://img.shields.io/github/forks/tiffanynk/trash-panda-fe?label=fork&style=for-the-badge"><img alt="Bitbucket open issues" src="https://img.shields.io/bitbucket/issues-raw/tiffanynk/trash-panda-fe?style=for-the-badge">
 
 
 <!-- PROJECT LOGO -->
