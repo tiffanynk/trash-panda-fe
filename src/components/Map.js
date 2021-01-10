@@ -140,7 +140,7 @@ export function MapContainer(props) {
 const containerStyle = {
     position: 'absolute',
     width: '100%',
-    height: '75%',
+    height: '70%',
 };
 
 export default GoogleApiWrapper({
