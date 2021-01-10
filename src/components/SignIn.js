@@ -13,7 +13,7 @@ export default function SignIn({ signUp, logIn }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        loginScreen ? logIn(email, password) : signUp(username, email, password);
+        loginScreen ? logIn({ email, password }) : signUp(username, email, password);
     };
 
     const handleLogin = (event) => {
@@ -38,7 +38,12 @@ export default function SignIn({ signUp, logIn }) {
                 <label>Email: </label>
                 <input name="Email" value={email} onChange={handleEmail}></input>
                 <label>Password: </label>
-                <input name="Password" value={password} onChange={handlePassword}></input>
+                <input
+                    type="password"
+                    name="Password"
+                    value={password}
+                    onChange={handlePassword}
+                ></input>
                 <button onClick={(event) => handleSubmit(event)}>Submit</button>
                 {loginScreen ? (
                     <>
