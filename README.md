@@ -28,7 +28,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://i.ibb.co/XYVmqmV/TRASH-PANDA-LOGO.jpg" alt="Trash Panda Logo" width="200" height="200">
   </a>
 
   <h3 align="center">Trash Panda</h3>
