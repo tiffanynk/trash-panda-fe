@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import env from 'react-dotenv';
 import trashPandaIcon from '../assets/trash-panda-icon.svg';
+import IosCheckmarkCircle from 'react-ionicons/lib/IosCheckmarkCircle';
+import IosCloseCircle from 'react-ionicons/lib/IosCloseCircle';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
@@ -111,9 +113,23 @@ export function MapContainer(props) {
                 onClose={onInfoWindowClose}
             >
                 <div className="location-details">
-                    <h1>{locationInfo.name}</h1>
-                    <p>Trash {locationInfo.trash ? 'YES' : 'NO'}</p>
-                    <p>Recycling {locationInfo.recycling ? 'YES' : 'NO'}</p>
+                    <h2>{locationInfo.name}</h2>
+                    <p>
+                        Trash{' '}
+                        {locationInfo.trash ? (
+                            <IosCheckmarkCircle className="check-icon" />
+                        ) : (
+                            <IosCloseCircle className="x-icon" />
+                        )}
+                    </p>
+                    <p>
+                        Recycling{' '}
+                        {locationInfo.recycling ? (
+                            <IosCheckmarkCircle className="check-icon" />
+                        ) : (
+                            <IosCloseCircle className="x-icon" />
+                        )}
+                    </p>
                     {/* <a href='http://trash-panda.tech'><Button id='log-button' onClick={handleShow}>+ Log Trash/Recyling</Button></a> */}
                 </div>
             </InfoWindow>

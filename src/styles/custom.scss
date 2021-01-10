@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+$green-1: #deedcf;
+$green-2: #bfe1b0;
+$green-3: #99d492;
+$green-4: #74c67a;
+$green-5: #56b870;
+$green-6: #39a96b;
+$green-7: #1d9a6c;
+$green-8: #188977;
+$green-9: #137177;
+$green-10: #0e4d64;
+$green-11: #0a2f51;
+
+$font-family-base: 'Yusei Magic', sans-serif;
+$body-color: $green-11;
+
 $theme-colors: (
     'info': tomato,
-    'primary': green,
+    'primary': $green-2,
     'danger': teal,
 );
 

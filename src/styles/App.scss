@@ -5,6 +5,7 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
+    background-color: $green-1;
 }
 
 .map-search {
@@ -17,5 +18,22 @@ input {
     margin-right: 10px;
 }
 
-// .location-details {
-// }
+.location-details {
+    font-family: $font-family-base;
+    h2 {
+        font-size: 1.5rem;
+        padding: 0 10px 10px 10px;
+        border-bottom: 3px $green-5 solid;
+    }
+    p {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 0 10px;
+    }
+    .check-icon {
+        fill: $green-6;
+    }
+    .x-icon {
+        fill: $gray-500;
+    }
+}
