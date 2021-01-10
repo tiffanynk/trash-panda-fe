@@ -13,9 +13,8 @@ function App() {
             <header>
                 <h1>TRASH PANDA</h1>
             </header>
-            {/* <MapSearch setLocation={setLocation} />
-            <Map location={location} /> */}
-            <SignIn />
+            <MapSearch setLocation={setLocation} />
+            <Map location={location} />
         </div>
     );
 }
