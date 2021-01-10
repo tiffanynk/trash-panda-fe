@@ -134,7 +134,8 @@ Kelsey Creehan - [Linkedin](https://twitter.com/your_username) - kelseycreehan@g
 
 Sydney Goldberg - [Linkedin](https://www.linkedin.com/in/sydney-goldberg-32b9751b0/) - sydney.goldberg@outlook.com
 
-Project Link: [https://github.com/tiffanynk/trash-panda-fe](https://github.com/tiffanynk/trash-panda-fe)
+[Project Frontend Link](https://github.com/tiffanynk/trash-panda-fe)<br/><br/>
+[Project Backend Link](https://github.com/tiffanynk/trash-panda-be)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
