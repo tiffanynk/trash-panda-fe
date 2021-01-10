@@ -47,7 +47,7 @@ export function MapContainer(props) {
             center={location}
             containerStyle={containerStyle}
             zoom={16}
-            initialCenter={{ lat: 39.7623533, lng: -104.9809164 }}
+            initialCenter={{ lat: 39.73711, lng: -104.97268 }}
         >
             {renderMarkers()}
             <InfoWindow
