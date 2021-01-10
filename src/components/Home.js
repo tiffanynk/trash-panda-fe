@@ -26,7 +26,16 @@ export default function Home({ user, isShowingHome, setUser }) {
 
     const GEOCODE_URL = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${env.GOOGLE_API_KEY}`;
 
-    const handleClose = () => setShowModal(false);
+    const handleClose = () => {
+        setShowModal(false);
+        isSubmitted(false);
+        setName('');
+        setAddress('');
+        setLat(0);
+        setLng(0);
+        setTrash(false);
+        setRecycling(false);
+    };
     const handleShow = () => setShowModal(true);
 
     const handleName = ({ target }) => setName(target.value);
@@ -60,9 +69,7 @@ export default function Home({ user, isShowingHome, setUser }) {
                     setProfileSelect={setProfileSelect}
                 />
             );
-        } else if (locationSelect === true) {
-            return <p>location!</p>;
-        } else {
+        } else if (homeSelect === true) {
             return (
                 <>
                     <MapSearch setLocation={setLocation} />
