@@ -72,7 +72,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Trash Panda is a Progressive Web App that aims to make it easier for people to recycle and throw away trash rather than literring. The app displays an interactive map where the users can view all of the closest recycling bins and trash locations convenient to them. The locations are represented by our extremely cute mascot, the Trash Panda himself. The recycling/trash locations are crowd-sourced, so a user can also add a new trash/recycling location for others to utilize.<br/><br/>
+Trash Panda is a Progressive Web App that aims to make it easier for people to recycle and throw away trash rather than littering. The app displays an interactive map where the users can view all of the closest recycling bins and trash locations convenient to them. The locations are represented by our extremely cute mascot, the Trash Panda himself. The recycling/trash locations are crowd-sourced, so a user can also add a new trash/recycling location for others to utilize.<br/><br/>
 <img src="https://i.ibb.co/7SNHwpF/mobile.png" alt="mobile" width="200" height="350"><br/>
 <img src="https://i.ibb.co/qDCrJJw/website.png" alt="website"/>
 
